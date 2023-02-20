@@ -3,9 +3,8 @@
 @import './partials/_mixins.scss';
 @import './partials/_global.scss';
 
-
 // Components
-
+@import '../components/ui/Box/Box.scss';
 
 // Pages
 @import '../components/pages/LoginPage/LoginPage.scss';
