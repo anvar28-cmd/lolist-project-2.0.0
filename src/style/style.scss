@@ -1,0 +1,21 @@
+@import './partials/_fonts.scss';
+@import './partials/_variables.scss';
+@import './partials/_mixins.scss';
+@import './partials/_global.scss';
+
+
+// Components
+
+
+// Pages
+@import '../components/pages/LoginPage/LoginPage.scss';
+@import '../components/pages/SignupPage/SignupPage.scss';
+
+@import '../components/layouts/PageWrapper/PageWrapper.scss';
+@import '../components/layouts/PageHeader/PageHeader.scss';
+@import '../components/pages/HeroesPage/HeroesPage.scss';
+@import '../components/pages/HeroesSelectedPage/HeroesSelectedPage.scss';
+@import '../components/pages/HeroesBuildsPage/HeroesBuildsPage.scss';
+@import '../components/pages/BuildsPage/BuildsPage.scss';
+
+@import '../components/pages/NotFoundPage/NotFoundPage.scss';
