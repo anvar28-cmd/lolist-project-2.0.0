@@ -6,11 +6,9 @@ function TextField({
   placeholder,
   required,
   defaultValue,
-  autoComplete,
 }) {
   return (
     <div className="text-field">
-      <label className="text-field__label" htmlFor={id}>{label}</label>
       <input 
         className="text-field__input"
         id={id}
@@ -18,9 +16,9 @@ function TextField({
         type={type}
         placeholder={placeholder}
         defaultValue={defaultValue}
-        autoComplete={autoComplete}
         required={required}
       />
+      <label className="text-field__label" htmlFor={id}>{label}</label>
     </div>
   );
 }

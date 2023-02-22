@@ -1,12 +1,15 @@
-import { Outlet } from 'react-router-dom';
-import PageHeader from '../PageHeader/PageHeader';
+import { Navigate, Outlet } from "react-router-dom";
+import { AppRoute } from "../../../const";
+import PageHeader from "../PageHeader/PageHeader";
 
-function PageWrapper() {
-  return (
+function PageWrapper({ isAuth, setIsAuth }) {
+  return isAuth ? (
     <>
-      <PageHeader />
+      <PageHeader setIsAuth={setIsAuth} />
       <Outlet />
     </>
+  ) : (
+    <Navigate to={AppRoute.LOGIN} />
   );
 }
 

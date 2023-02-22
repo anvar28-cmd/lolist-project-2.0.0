@@ -8,15 +8,20 @@ import BuildsPage from '../pages/BuildsPage/BuildsPage';
 import LoginPage from '../pages/LoginPage/LoginPage';
 import SignupPage from '../pages/SignupPage/SignupPage';
 import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
+import { useState } from 'react';
+import { getUser } from '../../services/user';
 
 function App() {
+  const user = getUser();
+  const [isAuth, setIsAuth] = useState(user ? true : false);
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={AppRoute.LOGIN} element={<LoginPage />} />
-        <Route path={AppRoute.SIGNUP} element={<SignupPage />} />
+        <Route path={AppRoute.LOGIN} element={<LoginPage isAuth={isAuth} setIsAuth={setIsAuth} />} />
+        <Route path={AppRoute.SIGNUP} element={<SignupPage isAuth={isAuth} setIsAuth={setIsAuth} />} />
         
-        <Route path={AppRoute.INDEX} element={<PageWrapper />}>
+        <Route path={AppRoute.INDEX} element={<PageWrapper isAuth={isAuth} setIsAuth={setIsAuth} />}>
           <Route index element={<Navigate to={AppRoute.HEROES} />} />
           <Route path={AppRoute.HEROES} element={<HeroesPage />} />
           <Route path={AppRoute.HEROES_SELECTED} element={<HeroesSelectedPage />} />
