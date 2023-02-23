@@ -12,15 +12,15 @@ function PageHeader({ setIsAuth }) {
   };
 
   return (
-    <header className="header container">
-      <h2 className="header__title">{`Welcome, ${user.name}!`}</h2>
+    <header className="page-header container">
+      <h2 className="page-header__title">{`Welcome, ${user.name}!`}</h2>
 
       <Button onClick={handleLogoutButtonClick} type="button">Logout</Button>
 
-      <ul className="header__list">
+      {/* <ul className="header__list">
         <li className="header__item">Heroes</li>
         <li className="header__item">About</li>
-      </ul>
+      </ul> */}
     </header>
   );
 }

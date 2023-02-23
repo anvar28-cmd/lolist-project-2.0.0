@@ -8,7 +8,7 @@ function NotFoundPage() {
       <h1 className="not-found__header">404</h1>
       <p className="not-found__text">Hmm... let me fix that</p>
       <Link to={AppRoute.LOGIN} className="not-found__link button">
-      Back, you dirty ape, back!
+        Back, you dirty ape, back!
       </Link>
     </main>
   )

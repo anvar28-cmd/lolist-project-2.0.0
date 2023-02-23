@@ -1,0 +1,7 @@
+.heroes-page {
+  display: flex;
+
+  &::before {
+    background-image: url('../../../assets/img/hero-page.jpg');
+  }
+}

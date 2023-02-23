@@ -1,0 +1,14 @@
+.heroes-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  grid-template-rows: repeat(4, 1fr);
+  overflow: hidden;
+  gap: 16px;
+
+  &__link {
+    display: block;
+  }
+}

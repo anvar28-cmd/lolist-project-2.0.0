@@ -8,10 +8,8 @@ import Form from "../../ui/Form/Form";
 import TextField from "../../ui/TextField/TextField";
 
 function SignupPage({setIsAuth, isAuth}) {
-
   const handleFormSubmit = (evt) => {
     evt.preventDefault();
-    console.log(evt.target.username.value);
 
     const api = createAPI();
 
@@ -30,7 +28,7 @@ function SignupPage({setIsAuth, isAuth}) {
   }
 
   return !isAuth ? (
-    <main className="signup-page">
+    <main className="signup-page page__main">
       <Form onSubmit={handleFormSubmit}>
         <TextField
           id="name"
