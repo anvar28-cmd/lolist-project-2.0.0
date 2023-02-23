@@ -1,19 +1,43 @@
-import { Link } from "react-router-dom";
-import { AppRoute } from "../../../const";
+import { Link, Navigate } from "react-router-dom";
+import { APIRoute, AppRoute } from "../../../const";
+import { createAPI } from "../../../services/api";
+import { saveToken } from "../../../services/token";
+import { saveUser } from "../../../services/user";
 import Button from "../../ui/Button/Button";
 import Form from "../../ui/Form/Form";
 import TextField from "../../ui/TextField/TextField";
 
-function SignupPage() {
-  return (
+function SignupPage({setIsAuth, isAuth}) {
+
+  const handleFormSubmit = (evt) => {
+    evt.preventDefault();
+    console.log(evt.target.username.value);
+
+    const api = createAPI();
+
+    api
+      .post(APIRoute.SIGNUP, {
+        name: evt.target.name.value,
+        username: evt.target.username.value,
+        password: evt.target.password.value,
+      })
+      .then(({data}) => {
+        saveToken(data.token);
+        saveUser(data);
+        setIsAuth(true)
+      })
+      .catch((error) => console.log(error))
+  }
+
+  return !isAuth ? (
     <main className="signup-page">
-      <Form>
+      <Form onSubmit={handleFormSubmit}>
         <TextField
           id="name"
           label="Name"
           name="name"
           type="text"
-          placeholder="Name Surname"
+          placeholder="John Smith"
           required
         />
 
@@ -39,10 +63,11 @@ function SignupPage() {
           Already have an account?
           <Link to={AppRoute.LOGIN} style={{ color: 'white' }}> Login</Link>
         </p>
-
         <Button fullWidth type="submit">Sign up</Button>
       </Form>
     </main>
+  ) : (
+    <Navigate to={AppRoute.INDEX} />
   );
 }
 
