@@ -1,0 +1,17 @@
+.builds-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 8px;
+  background-color: rgba(#000, 32%);
+  border-radius: 8px;
+
+  &__list {
+    display: grid;
+    grid-auto-columns: 40px;
+    grid-auto-flow: column;
+    gap: 8px;
+    font-size: 12px;
+  }
+}
