@@ -4,10 +4,11 @@
   align-items: center;
   border: none;
   background-color: goldenrod;
-  font-size: 16px;
+  font-size: 1.2rem;
   color: black;
+  backdrop-filter: blur(15px);
   width: max-content;
-  height: 40px;
+  height: 25px;
   padding: 0 16px;
   border-radius: 4px;
   text-transform: uppercase;
@@ -15,6 +16,10 @@
   box-shadow: 0 4px 8px rgba(goldenrod, 0.5);
   cursor: pointer;
   transition: .3s;
+  @include tablet {
+    font-size: 1.6rem;
+    height: 40px;
+  }
 
   &:hover {
     box-shadow: none;

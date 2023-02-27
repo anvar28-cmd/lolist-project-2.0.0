@@ -1,7 +1,7 @@
 .signup-page {
   display: flex;
   justify-content: flex-end;
-
+  padding-top: 0;
   &::before {
     background-image: url('../../../assets/img/signup-page.jpeg');
   }

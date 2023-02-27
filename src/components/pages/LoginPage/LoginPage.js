@@ -30,7 +30,7 @@ function LoginPage({ isAuth, setIsAuth }) {
   };
 
   return !isAuth ? (
-    <main className="login-page page__main">
+    <main className="login-page page__main login-page--feature">
       <Form onSubmit={handleFormSubmit}>
         <TextField
           id="username"
@@ -47,6 +47,7 @@ function LoginPage({ isAuth, setIsAuth }) {
           name="password"
           type="password"
           placeholder="********"
+          minlength="3"
           required
         />
 

@@ -3,7 +3,7 @@ function Board({ title, children }) {
     <section className="board">
       <h2 className="board__title">{title}</h2>
 
-      <div className="board__inner">{children}</div>
+      {children}
     </section>
   );
 }

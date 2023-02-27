@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { APIRoute, AppRoute } from "../../../const";
 import { createAPI } from "../../../services/api";
@@ -8,6 +9,7 @@ import Form from "../../ui/Form/Form";
 import TextField from "../../ui/TextField/TextField";
 
 function SignupPage({setIsAuth, isAuth}) {
+  const [error, setError] = useState();
   const handleFormSubmit = (evt) => {
     evt.preventDefault();
 
@@ -22,9 +24,9 @@ function SignupPage({setIsAuth, isAuth}) {
       .then(({data}) => {
         saveToken(data.token);
         saveUser(data);
-        setIsAuth(true)
+        setIsAuth(true);
       })
-      .catch((error) => console.log(error))
+      .catch((error) => setError(error.response.data.error.message));
   }
 
   return !isAuth ? (
@@ -62,6 +64,9 @@ function SignupPage({setIsAuth, isAuth}) {
           <Link to={AppRoute.LOGIN} style={{ color: 'white' }}> Login</Link>
         </p>
         <Button fullWidth type="submit">Sign up</Button>
+        {error && (
+          <p className="login-page__exist">{error}</p>
+        )}
       </Form>
     </main>
   ) : (

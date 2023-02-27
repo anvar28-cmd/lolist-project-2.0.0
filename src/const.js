@@ -10,11 +10,21 @@ export const AppRoute = {
   HEROES_SELECTED: '/heroes/:slug',
   HEROES_BUILDS: '/heroes/:slug/builds',
   BUILDS: '/builds',
+  ABOUT: '/about',
   NOT_FOUND: '*',
 };
 
 export const APIRoute = {
-  LOGIN: `/auth/login`,
-  SIGNUP: `/auth/signup`,
-  HEROES: `/heroes`,
+  LOGIN: '/auth/login',
+  SIGNUP: '/auth/signup',
+  HEROES: '/heroes',
+  ITEMS: '/items',
+  SPELLS: '/spells',
 };
+
+export const NavigationItems = [
+  { url: AppRoute.HEROES, text: "Heroes" },
+  { url: AppRoute.BUILDS, text: "Builds" },
+  { url: AppRoute.ABOUT, text: "About" }
+];
+

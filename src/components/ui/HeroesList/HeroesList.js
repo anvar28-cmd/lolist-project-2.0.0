@@ -7,7 +7,6 @@ import Card from "../Card/Card";
 function HeroesList() {
   const [heroes, setHeroes] = useState([]);
 
-  
   useEffect(() => {
     const api = createAPI();
     api

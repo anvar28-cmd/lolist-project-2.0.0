@@ -1,6 +1,6 @@
 function BuildsPage() {
   return (
-    <div>BuildsPage</div>
+    <main className='builds-page page__main container'>BuildsPage</main>
   );
 }
 

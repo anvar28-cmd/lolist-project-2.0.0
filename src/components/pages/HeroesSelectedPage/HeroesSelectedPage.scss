@@ -1,0 +1,29 @@
+.heroes-selected {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: auto;
+  padding-bottom: 120px;
+
+  &::before {
+    background-image: url('../../../assets/img/hero-selected-page.jpg');
+  }
+
+  @include desktop {
+    flex-direction: row;
+    max-width: 100%;
+    overflow: hidden;
+    align-items: flex-start;
+    height: calc(100vh - 132px);
+    gap: 16px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      width: 35%;
+    }
+  }
+}

@@ -14,7 +14,7 @@ function Card({name, image, children}) {
         alt={name || ""}
       />
 
-      <dialog className="card__modal">{children}</dialog>
+      {children && <dialog className="card__modal">{children}</dialog>}
     </figure>
   )
 }

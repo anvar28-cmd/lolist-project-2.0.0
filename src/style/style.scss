@@ -11,12 +11,16 @@
 @import '../components/ui/Board/Board.scss';
 @import '../components/ui/Card/Card.scss';
 @import '../components/ui/HeroesList/HeroesList.scss';
+@import '../components/ui/HeroCard/HeroCard.scss';
+@import '../components/ui/BuildsCard/BuildsCard.scss';
+@import '../components/ui/PageNavigation/PageNavigation.scss';
+@import '../components/ui/ItemsList/ItemsList.scss';
+@import '../components/ui/SpellsList/SpellsList.scss';
+
 
 // Pages
 @import '../components/pages/LoginPage/LoginPage.scss';
 @import '../components/pages/SignupPage/SignupPage.scss';
-@import '../components/pages/HeroesPage/HeroesPage.scss';
-@import '../components/pages/NotFoundPage/NotFoundPage.scss';
 
 @import '../components/layouts/PageWrapper/PageWrapper.scss';
 @import '../components/layouts/PageHeader/PageHeader.scss';
@@ -24,5 +28,6 @@
 @import '../components/pages/HeroesSelectedPage/HeroesSelectedPage.scss';
 @import '../components/pages/HeroesBuildsPage/HeroesBuildsPage.scss';
 @import '../components/pages/BuildsPage/BuildsPage.scss';
+@import '../components/pages/AboutPage/AboutPage.scss';
 
 @import '../components/pages/NotFoundPage/NotFoundPage.scss';

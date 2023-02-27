@@ -10,6 +10,7 @@ import SignupPage from '../pages/SignupPage/SignupPage';
 import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
 import { useState } from 'react';
 import { getUser } from '../../services/user';
+import AboutPage from '../pages/AboutPage/AboutPage';
 
 function App() {
   const user = getUser();
@@ -27,6 +28,7 @@ function App() {
           <Route path={AppRoute.HEROES_SELECTED} element={<HeroesSelectedPage />} />
           <Route path={AppRoute.HEROES_BUILDS} element={<HeroesBuildsPage />} />
           <Route path={AppRoute.BUILDS} element={<BuildsPage />} />
+          <Route path={AppRoute.ABOUT} element={<AboutPage />} />
         </Route>
         
         <Route path={AppRoute.NOT_FOUND} element={<NotFoundPage />} />

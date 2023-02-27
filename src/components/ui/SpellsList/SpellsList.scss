@@ -1,17 +1,17 @@
-.heroes-list {
+.spells-list {
   margin: 0;
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
   gap: 16px;
-  padding-right: 8px;
-  margin-right: -8px;
-  overflow-y: scroll;
-  height: 100%;
+  grid-auto-flow: column;
+  grid-auto-columns: 64px;
+  overflow-x: scroll;
+  padding-bottom: 8px;
+  margin-bottom: -8px;
 
   &::-webkit-scrollbar {
-    width: 0.8rem;
+    height: 0.8rem;
   }
 
   &::-webkit-scrollbar-track {
@@ -20,9 +20,5 @@
 
   &::-webkit-scrollbar-thumb {
     background-color: rgba(goldenrod, 32%);
-  }
-
-  &__link {
-    display: block;
   }
 }
