@@ -3,7 +3,7 @@ import { APIRoute } from "../../../const";
 import { createAPI } from "../../../services/api";
 import Card from "../Card/Card";
 
-function SpellsList() {
+function SpellsList({spellClickHandler}) {
   const [spells, setSpells] = useState([]);
 
   useEffect(() => {
@@ -14,15 +14,13 @@ function SpellsList() {
       .catch((error) => console.log(error));
   }, []);
 
-  const handleSpellClick = (spell) => () => console.log(spell);
-
   return (
     <ul className="spells-list">
       {spells?.map((spell) => (
         <li 
           key={spell.id} 
           className="spells-list__item"
-          onClick={handleSpellClick(spell)}
+          onClick={spellClickHandler(spell)}
         >
           <Card 
             image={spell.image} 

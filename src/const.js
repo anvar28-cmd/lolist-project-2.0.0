@@ -18,8 +18,10 @@ export const APIRoute = {
   LOGIN: '/auth/login',
   SIGNUP: '/auth/signup',
   HEROES: '/heroes',
+  HEROES_BUILDS: '/heroes/:slug/builds',
   ITEMS: '/items',
   SPELLS: '/spells',
+  BUILDS: '/builds',
 };
 
 export const NavigationItems = [
@@ -27,4 +29,3 @@ export const NavigationItems = [
   { url: AppRoute.BUILDS, text: "Builds" },
   { url: AppRoute.ABOUT, text: "About" }
 ];
-

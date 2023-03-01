@@ -4,7 +4,7 @@ import { createAPI } from "../../../services/api";
 import Card from "../Card/Card";
 import GoldIcon from "../Icons/GoldIcon";
 
-function ItemsList() {
+function ItemsList({itemClickHandler}) {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -15,15 +15,13 @@ function ItemsList() {
       .catch((error) => console.log(error));
   }, []);
 
-  const handleItemClick = (item) => () => console.log(item);
-
   return (
     <ul className="items-list">
       {items?.map((item) => (
         <li 
           key={item.id}
           className="items-list__item"
-          onClick={handleItemClick(item)}
+          onClick={itemClickHandler(item)}
         >
           <Card 
             image={item.image} 

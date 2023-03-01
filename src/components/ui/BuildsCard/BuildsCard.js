@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import Card from "../Card/Card";
 
 function BuildsCard({build, onTitleChange, onSubmit}) {
@@ -34,6 +35,8 @@ function BuildsCard({build, onTitleChange, onSubmit}) {
           />
         ))}
       </div>
+
+      <Button type="submit">Submit</Button>
     </form>
   );
 }
