@@ -9,7 +9,8 @@ function BuildsCard({build, onTitleChange, onSubmit}) {
     <form className="builds-card" onSubmit={onSubmit}>
       <input 
         className="builds-card__name" 
-        type="text" 
+        type="text"
+        name="description"
         defaultValue={build.title}
         placeholder="Group name"
         required
@@ -22,6 +23,7 @@ function BuildsCard({build, onTitleChange, onSubmit}) {
             key={key}
             name={build.items[key]?.name ?? `Item ${key + 1}`}
             image={build.items[key]?.image}
+            
           />
         ))}
       </div>

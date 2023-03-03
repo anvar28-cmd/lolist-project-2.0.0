@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { generatePath, useNavigate, useParams } from "react-router-dom";
 import { APIRoute, AppRoute } from "../../../const";
 import { createAPI } from "../../../services/api";
 import Board from "../../ui/Board/Board";
@@ -7,21 +7,21 @@ import BuildsCard from "../../ui/BuildsCard/BuildsCard";
 import HeroCard from "../../ui/HeroCard/HeroCard";
 import ItemsList from "../../ui/ItemsList/ItemsList";
 import SpellsList from "../../ui/SpellsList/SpellsList";
-import { getUser } from "../../../services/user";
 
 function HeroesSelectedPage() {
+  const navigate = useNavigate();
   const params = useParams();
   const slug = params.slug;
   const [hero, setHero] = useState(null);
   const [build, setBuild] = useState({
-    userID: getUser().id,
     heroID: 0,
-    title: '',
+    title: "",
     items: [],
     spells: [],
   });
 
-  const handleBuildTitleChange = (evt) => setBuild({
+  const handleBuildTitleChange = (evt) =>
+    setBuild({
       ...build,
       title: evt.target.value,
     });
@@ -32,8 +32,15 @@ function HeroesSelectedPage() {
     const api = createAPI();
 
     api
-      .get(APIRoute.BUILDS)
-      .then(({data}) => console.log(data))
+      .post(APIRoute.BUILDS, {
+        title: evt.target.description.value,
+        heroID: build.heroID,
+        items: build.items.map(({ id }) => id),
+        spells: build.spells.map(({ id }) => id),
+      })
+      .then(() => {
+        navigate(generatePath(AppRoute.HEROES_BUILDS, {slug: hero.slug}))
+      })
       .catch((error) => console.log(error));
   };
 
@@ -60,14 +67,14 @@ function HeroesSelectedPage() {
       const api = createAPI();
       api
         .get(`${AppRoute.HEROES}/${slug}`)
-        .then(({data}) => {
+        .then(({ data }) => {
           setHero(data);
-          build.heroID = data.id;
+          build.heroID = data.id;  //
         })
         .catch((error) => console.log(error));
     }
   }, [slug, build]);
-  
+
   return (
     <main className="heroes-selected page__main container">
       <HeroCard hero={hero} />
@@ -80,9 +87,9 @@ function HeroesSelectedPage() {
         <Board title="Spells">
           <SpellsList spellClickHandler={handleSpellClick} />
         </Board>
-        
-        <BuildsCard 
-          build={build} 
+
+        <BuildsCard
+          build={build}
           onTitleChange={handleBuildTitleChange}
           onSubmit={handleBuildFormSubmit}
         />

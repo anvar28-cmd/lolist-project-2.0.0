@@ -1,0 +1,8 @@
+.heroes-builds {
+    display: flex;
+  
+    &::before {
+      background-image: url('../../../assets/img/hero-build-page.jpg');
+    }
+  }
+  
