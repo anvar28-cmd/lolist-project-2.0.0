@@ -1,0 +1,20 @@
+.builds-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      @include tablet {
+        align-items: center;
+        flex-direction: row;
+        gap: 24px;
+      }
+    }
+    &__button {
+      margin-top: 1.8rem;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  
