@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { AppRoute } from "../../../const";
+import { APIRoute, AppRoute } from "../../../const";
 import { createAPI } from "../../../services/api";
 import Board from "../../ui/Board/Board";
 import BuildsList from "../../ui/BuildsList/BuildsList";
@@ -12,20 +12,19 @@ function HeroesBuildsPage() {
   const [builds, setBuilds] = useState();
 
   const handleDeleteButton = (evt) => {
-  
-        console.log(builds);
-   
+    const api = createAPI();
+    api
+      .delete(`${APIRoute.BUILDS}/${builds.id}`)
+      .then(() => {
+        const newBuilds = builds.filter((item) => item.id !== builds.id);
+        setBuilds(newBuilds);
+      })
+      .catch((error) => console.log(error));
+    console.log(builds);
   };
 
   const handleEditButton = (evt) => {
-    // const api = createAPI();
-    // api
-    //   .get(`${AppRoute.HEROES}/${slug}/builds`)
-    //   .then(({ data }) => {
-    //     setBuilds(data);
-    //     console.log(data);
-    //   })
-    //   .catch((error) => console.log(error));
+
   };
 
   useEffect(() => {
