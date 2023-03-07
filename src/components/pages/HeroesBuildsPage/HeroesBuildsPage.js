@@ -41,7 +41,7 @@ function HeroesBuildsPage() {
 
   return (
     <main className="heroes-builds page__main container">
-      <Board id="build-board" title="Hello">
+      <Board title="Hero's builds">
         <BuildsList
           builds={builds}
           handleDeleteButton={handleDeleteButton}
