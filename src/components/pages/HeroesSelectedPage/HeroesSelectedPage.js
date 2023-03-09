@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import { generatePath, useNavigate, useParams } from "react-router-dom";
+import { generatePath, useParams } from "react-router-dom";
 import { APIRoute, AppRoute } from "../../../const";
 import { createAPI } from "../../../services/api";
 import Board from "../../ui/Board/Board";
 import BuildsCard from "../../ui/BuildsCard/BuildsCard";
+import Button from "../../ui/Button/Button";
 import HeroCard from "../../ui/HeroCard/HeroCard";
 import ItemsList from "../../ui/ItemsList/ItemsList";
 import SpellsList from "../../ui/SpellsList/SpellsList";
 
 function HeroesSelectedPage() {
-  const navigate = useNavigate();
   const params = useParams();
   const slug = params.slug;
   const [hero, setHero] = useState(null);
@@ -39,7 +39,13 @@ function HeroesSelectedPage() {
         spells: build.spells.map(({ id }) => id),
       })
       .then(() => {
-        navigate(generatePath(AppRoute.HEROES_BUILDS, {slug: hero.slug}))
+        evt.target.reset();
+        setBuild({
+          ...build,
+          title: "",
+          items: [],
+          spells: [],
+        })
       })
       .catch((error) => console.log(error));
   };
@@ -66,10 +72,10 @@ function HeroesSelectedPage() {
     if (slug) {
       const api = createAPI();
       api
-        .get(`${AppRoute.HEROES}/${slug}`)
+        .get(generatePath(APIRoute.HEROES_SELECTED, {slug}))
         .then(({ data }) => {
           setHero(data);
-          build.heroID = data.id;  //
+          build.heroID = data.id;
         })
         .catch((error) => console.log(error));
     }
@@ -93,7 +99,10 @@ function HeroesSelectedPage() {
           onTitleChange={handleBuildTitleChange}
           onSubmit={handleBuildFormSubmit}
         />
+
+        <Button href={generatePath(AppRoute.HEROES_BUILDS, {slug})}>Saved builds</Button>
       </div>
+
     </main>
   );
 }

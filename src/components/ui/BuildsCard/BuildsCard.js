@@ -1,12 +1,13 @@
 import Button from "../Button/Button";
 import Card from "../Card/Card";
 
-function BuildsCard({build, onTitleChange, onSubmit}) {
+function BuildsCard({build, onTitleChange, onSubmit, readOnly}) {
   const ITEMS_COUNT = 6;
   const SPELLS_COUNT = 2;
+  const ParentTag = readOnly ? 'div' : 'form';
 
   return (
-    <form className="builds-card" onSubmit={onSubmit}>
+    <ParentTag className="builds-card" onSubmit={onSubmit}>
       <input 
         className="builds-card__name" 
         type="text"
@@ -15,6 +16,7 @@ function BuildsCard({build, onTitleChange, onSubmit}) {
         placeholder="Group name"
         required
         onChange={onTitleChange}
+        readOnly={readOnly}
       />
 
       <div className="builds-card__list">
@@ -38,8 +40,8 @@ function BuildsCard({build, onTitleChange, onSubmit}) {
         ))}
       </div>
 
-      <Button type="submit">Submit</Button>
-    </form>
+      {!readOnly && <Button type="submit">Submit</Button>}
+    </ParentTag>
   );
 }
 

@@ -18,6 +18,7 @@ export const APIRoute = {
   LOGIN: '/auth/login',
   SIGNUP: '/auth/signup',
   HEROES: '/heroes',
+  HEROES_SELECTED: '/heroes/:slug',
   HEROES_BUILDS: '/heroes/:slug/builds',
   ITEMS: '/items',
   SPELLS: '/spells',
