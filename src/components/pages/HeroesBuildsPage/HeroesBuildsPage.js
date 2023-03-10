@@ -27,31 +27,10 @@ function HeroesBuildsPage() {
     }
   }, [slug]);
 
-  const handleDeleteButtonClick = () => {
-    const api = createAPI();
-    api
-      .delete(`${APIRoute.BUILDS}/${builds.id}`)
-      .then(() => {
-        const newBuilds = builds.filter((item) => item.id !== builds.id);
-        setBuilds(newBuilds);
-      })
-      .catch((error) => console.log(error));
-    console.log(builds);
-  };
-
-  const handleEditButtonClick = () => {
-
-  };
-
-
   return (
     <main className="heroes-builds page__main container">
       <Board title={`${hero ? `${hero.name}'s builds` : ''}`}>
-        <BuildsList
-          builds={builds}
-          onDeleteButtonClick={handleDeleteButtonClick}
-          onEditButtonClick={handleEditButtonClick}
-        />
+        <BuildsList builds={builds} />
       </Board>
     </main>
   );

@@ -23,6 +23,7 @@ export const APIRoute = {
   ITEMS: '/items',
   SPELLS: '/spells',
   BUILDS: '/builds',
+  BUILDS_SELECTED: '/builds/:id',
 };
 
 export const NavigationItems = [

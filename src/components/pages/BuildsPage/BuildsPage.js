@@ -5,30 +5,13 @@ import Board from "../../ui/Board/Board";
 import BuildsList from "../../ui/BuildsList/BuildsList";
 
 function BuildsPage() {
-
-  const [allBuilds, setAllBuilds] = useState();
-
-  const handleDeleteButton = (evt) => {
-    const api = createAPI();
-    api
-      .delete(`${APIRoute.BUILDS}/${allBuilds.id}`)
-      .then(() => {
-        const newBuilds = allBuilds.filter((item) => item.id !== allBuilds.id);
-        setAllBuilds(newBuilds);
-      })
-      .catch((error) => console.log(error));
-    console.log(allBuilds);
-  };
-
-  const handleEditButton = (evt) => {
-    
-  };
+  const [builds, setBuilds] = useState();
 
   useEffect(() => {
     const api = createAPI();
     api
       .get(APIRoute.BUILDS)
-      .then(({data}) => setAllBuilds(data))
+      .then(({data}) => setBuilds(data))
       .catch((error) => console.log(error));
   }, []);
 
@@ -36,9 +19,8 @@ function BuildsPage() {
     <main className='builds-page page__main container'>
       <Board title="All builds">
         <BuildsList
-          allBuilds={allBuilds}
-          handleDeleteButton={handleDeleteButton}
-          handleEditButton={handleEditButton}
+          builds={builds}
+          withHeroesName
         />
       </Board>
     </main>

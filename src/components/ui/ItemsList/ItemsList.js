@@ -27,7 +27,7 @@ function ItemsList({itemClickHandler}) {
             image={item.image} 
             name={item.name}
           >
-            <h3>{item.gold}</h3><GoldIcon/>
+            <h3>{item.gold} <GoldIcon/></h3>
             <p>{item.blurb}</p>
           </Card>
         </li>

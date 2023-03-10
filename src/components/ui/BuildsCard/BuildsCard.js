@@ -1,13 +1,14 @@
 import Button from "../Button/Button";
 import Card from "../Card/Card";
 
-function BuildsCard({build, onTitleChange, onSubmit, readOnly}) {
+function BuildsCard({build, onTitleChange, onSubmit, readOnly, heroName}) {
   const ITEMS_COUNT = 6;
   const SPELLS_COUNT = 2;
   const ParentTag = readOnly ? 'div' : 'form';
 
   return (
     <ParentTag className="builds-card" onSubmit={onSubmit}>
+      {heroName && <h3 className="builds-card__hero">{heroName}</h3>}
       <input 
         className="builds-card__name" 
         type="text"

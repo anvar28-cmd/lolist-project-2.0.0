@@ -1,10 +1,14 @@
 function GoldIcon() {
   return (
     <svg
+    className="icon"
      width='24'
      height='24'
-      viewBox="0 0 1024 1024"
-      version="1.1"
+     vertical-align='bottom'
+    //  style={{vertical_align: 'bottom'}}
+    viewBox="0 0 1024 1024"
+      ersion="1.1"
+    
       
     >
       <path
