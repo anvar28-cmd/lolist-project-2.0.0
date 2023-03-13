@@ -1,10 +1,13 @@
 .heroes-selected {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 32px;
   height: auto;
   padding-bottom: 320px;
-
+&:last-child {
+  
+  align-self: flex-start;
+}
   &::before {
     background-image: url('../../../assets/img/hero-selected-page.jpg');
   }
@@ -33,17 +36,33 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    background-color: #000;
+    // background-color: rgba(79, 94, 57, 42%);
+    background-image: url('../../../assets/img/form-back.jpg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 0;
     z-index: 2;
     width: 100%;
 
     @include desktop {
       position: static;
-      background-color: rgba(#000, 32%);
+      background-image: unset;
+      background-color: rgb(79, 94, 57, 42%);
       border-radius: 8px;
       z-index: 0;
       width: auto;
+      &::-webkit-scrollbar {
+        height: 0.8rem;
+      }
+    
+      &::-webkit-scrollbar-track {
+        background-color: rgba(goldenrod, 32%);
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(goldenrod, 32%);
+      }
     }
   }
 }

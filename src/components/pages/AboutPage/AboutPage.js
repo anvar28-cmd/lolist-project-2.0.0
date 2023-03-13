@@ -5,7 +5,6 @@ function AboutPage() {
   return (
     <main className="about-page page__main container">
       <div className="about-page__container">
-      
         <h1 className="about-page__title">What is LoLiST?</h1>
         <p className="about-page__text">
           LoLiST or League of Legend List:Item Builder. It is an add-on to the

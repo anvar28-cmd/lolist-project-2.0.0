@@ -11,13 +11,13 @@ function BuildsPage() {
     const api = createAPI();
     api
       .get(APIRoute.BUILDS)
-      .then(({data}) => setBuilds(data))
+      .then(({ data }) => setBuilds(data))
       .catch((error) => console.log(error));
   }, []);
 
   return (
-    <main className='builds-page page__main container'>
-      <Board title="All builds">
+    <main className="builds-page page__main container">
+      <Board title="All builds" background="rgba(44, 103, 171, 39%)">
         <BuildsList
           builds={builds}
           withHeroesName

@@ -94,16 +94,17 @@ function HeroesSelectedPage() {
     <main className="heroes-selected page__main container">
       <HeroCard hero={hero} />
 
-      <Board title="Items">
+      <Board title="Items" background="rgba(79, 94, 57, 42%)">
         <ItemsList itemClickHandler={handleItemClick} />
       </Board>
 
       <div className="heroes-selected__inner">
-        <Board title="Spells">
+        <Board title="Spells" background="rgba(79, 94, 57, 42%)">
           <SpellsList spellClickHandler={handleSpellClick} />
         </Board>
 
         <BuildsCard
+          background="rgba(79, 94, 57, 42%)"
           className="heroes-selected__builds-card"
           build={build}
           onTitleChange={handleBuildTitleChange}

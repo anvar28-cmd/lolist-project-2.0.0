@@ -9,7 +9,9 @@ function BuildsCard({
   heroName,
   onReset,
   className,
+  background
 }) {
+  document.documentElement.style.setProperty("--form-background", background);
   const ITEMS_COUNT = 6;
   const SPELLS_COUNT = 2;
   const ParentTag = readOnly ? "div" : "form";
