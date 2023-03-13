@@ -6,7 +6,11 @@
     height: 100%;
     &__item {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: flex-end;
+      
       @include tablet {
         align-items: center;
         flex-direction: row;

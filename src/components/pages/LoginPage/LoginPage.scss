@@ -4,5 +4,7 @@
   &::before {
     background-image: url('../../../assets/img/login-page.jpeg');
   }
-  
+  &__title {
+    margin-left: 1rem;
+  }
 }

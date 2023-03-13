@@ -45,11 +45,20 @@ function HeroesSelectedPage() {
           title: "",
           items: [],
           spells: [],
-        })
+        });
       })
       .catch((error) => console.log(error));
   };
 
+  const handleBuildFormReset = (evt) => {
+    evt.target.reset();
+    setBuild({
+      ...build,
+      title: "",
+      items: [],
+      spells: [],
+    });
+  };
   const handleItemClick = (item) => () => {
     if (build.items.length < 6) {
       setBuild({
@@ -72,7 +81,7 @@ function HeroesSelectedPage() {
     if (slug) {
       const api = createAPI();
       api
-        .get(generatePath(APIRoute.HEROES_SELECTED, {slug}))
+        .get(generatePath(APIRoute.HEROES_SELECTED, { slug }))
         .then(({ data }) => {
           setHero(data);
           build.heroID = data.id;
@@ -95,14 +104,17 @@ function HeroesSelectedPage() {
         </Board>
 
         <BuildsCard
+          className="heroes-selected__builds-card"
           build={build}
           onTitleChange={handleBuildTitleChange}
           onSubmit={handleBuildFormSubmit}
+          onReset={handleBuildFormReset}
         />
 
-        <Button href={generatePath(AppRoute.HEROES_BUILDS, {slug})}>Saved builds</Button>
+        <Button href={generatePath(AppRoute.HEROES_BUILDS, { slug })}>
+          Saved builds
+        </Button>
       </div>
-
     </main>
   );
 }

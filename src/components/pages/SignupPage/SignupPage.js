@@ -32,12 +32,14 @@ function SignupPage({setIsAuth, isAuth}) {
   return !isAuth ? (
     <main className="signup-page page__main">
       <Form onSubmit={handleFormSubmit}>
+      <h1 className="signup-page__title">LoLiST</h1>
         <TextField
           id="name"
           label="Name"
           name="name"
           type="text"
           placeholder="John Smith"
+          pattern="[^()/><\][\\\x,;|]+@*&#!?%_-+=~`"
           required
         />
 
@@ -47,6 +49,8 @@ function SignupPage({setIsAuth, isAuth}) {
           name="username"
           type="text"
           placeholder="user123"
+          minlength="4"
+          pattern="[^()/><\][\\\x,;|]+@*&#!?%_-+=~`"
           required
         />
 
@@ -56,6 +60,7 @@ function SignupPage({setIsAuth, isAuth}) {
           name="password"
           type="password"
           placeholder="********"
+          minlength="6"
           required
         />
 

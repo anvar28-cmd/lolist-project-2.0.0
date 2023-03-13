@@ -28,17 +28,19 @@
     
   }
 
-  &:hover &__modal {
-    position: fixed;
-    top: 100%;
-    left: 100%;
-    margin: 0;
-    z-index: 2;
-    transform: translate(-100%, -100%);
-    border: none;
-    width: 100%;
-    max-width: 420px;
-    display: block;
+  @include tablet {
+    &:hover &__modal {
+      position: fixed;
+      top: 100%;
+      left: 100%;
+      margin: 0;
+      z-index: 2;
+      transform: translate(-100%, -100%);
+      border: none;
+      width: 100%;
+      max-width: 420px;
+      display: block;
+    }
   }
 }
 
