@@ -8,6 +8,7 @@ import Button from "../../ui/Button/Button";
 import HeroCard from "../../ui/HeroCard/HeroCard";
 import ItemsList from "../../ui/ItemsList/ItemsList";
 import SpellsList from "../../ui/SpellsList/SpellsList";
+import { toast } from "react-toastify";
 
 function HeroesSelectedPage() {
   const params = useParams();
@@ -46,6 +47,16 @@ function HeroesSelectedPage() {
           items: [],
           spells: [],
         });
+        toast.success("Build was saved! Poro wants you create more builds :)", {
+          position: "top-center",
+          autoClose: 3500,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
       })
       .catch((error) => console.log(error));
   };
@@ -113,7 +124,7 @@ function HeroesSelectedPage() {
         />
 
         <Button href={generatePath(AppRoute.HEROES_BUILDS, { slug })}>
-          Saved builds
+          {hero?.name}'s builds
         </Button>
       </div>
     </main>

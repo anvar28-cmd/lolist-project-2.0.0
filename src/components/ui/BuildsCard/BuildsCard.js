@@ -53,7 +53,7 @@ function BuildsCard({
       {!readOnly && (
         <div className="builds-card__buttons">
           <Button type="reset">Clear</Button>
-          <Button type="submit">Submit</Button>
+          <Button type="submit">Save</Button>
         </div>
       )}
     </ParentTag>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { APIRoute, AppRoute } from "../../../const";
 import { createAPI } from "../../../services/api";
 import { saveToken } from "../../../services/token";
@@ -25,6 +26,16 @@ function SignupPage({setIsAuth, isAuth}) {
         saveToken(data.token);
         saveUser(data);
         setIsAuth(true);
+        toast.success("Your account was created successfully. Welcome to LoLiST!", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
       })
       .catch((error) => setError(error.response.data.error.message));
   }
@@ -60,7 +71,7 @@ function SignupPage({setIsAuth, isAuth}) {
           name="password"
           type="password"
           placeholder="********"
-          minlength="6"
+          minlength="5"
           required
         />
 

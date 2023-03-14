@@ -49,7 +49,7 @@ function LoginPage({ isAuth, setIsAuth }) {
           name="password"
           type="password"
           placeholder="********"
-          minlength="3"
+          minlength="5"
           required
         />
 
