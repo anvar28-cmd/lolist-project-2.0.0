@@ -8,6 +8,7 @@ function TextField({
   defaultValue,
   minlength,
   pattern,
+  title
 }) {
   return (
     <div className="text-field">
@@ -20,6 +21,7 @@ function TextField({
         defaultValue={defaultValue}
         required={required}
         minLength={minlength}
+        title={title}
         pattern={pattern}
       />
       <label className="text-field__label" htmlFor={id}>

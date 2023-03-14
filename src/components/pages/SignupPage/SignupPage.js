@@ -53,7 +53,8 @@ function SignupPage({ setIsAuth, isAuth }) {
           name="name"
           type="text"
           placeholder="John Smith"
-          pattern="[^()/><\][\\\x,;|]+@*&#!?%_-+=~`"
+          pattern="[A-Za-z]{3, 16}"
+          title="Name must contain at least 3 letters"
           required
         />
 
@@ -64,7 +65,8 @@ function SignupPage({ setIsAuth, isAuth }) {
           type="text"
           placeholder="user123"
           minlength="4"
-          pattern="[^()/><\][\\\x,;|]+@*&#!?%_-+=~`"
+          pattern="[A-Za-z\d\.]{4,12}"
+          title="Username must be between 4 and 12 characters in length and contain only letters, numbers and period"
           required
         />
 
@@ -75,6 +77,7 @@ function SignupPage({ setIsAuth, isAuth }) {
           type="password"
           placeholder="********"
           minlength="5"
+          title="Password must contain at least 5 characters"
           required
         />
 

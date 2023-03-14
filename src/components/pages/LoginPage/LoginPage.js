@@ -39,7 +39,8 @@ function LoginPage({ isAuth, setIsAuth }) {
           name="username"
           type="text"
           placeholder="user123"
-          pattern="[^()/><\][\\\x,;|]+@*&#!?%_-+=~`"
+          pattern="[A-Za-z\d\.]{4,12}"
+          title="Username must be between 4 and 12 characters in length and contain only letters, numbers and periods"
           required
         />
 
@@ -50,6 +51,7 @@ function LoginPage({ isAuth, setIsAuth }) {
           type="password"
           placeholder="********"
           minlength="5"
+          title="Password must contain at least 5 characters"
           required
         />
 
