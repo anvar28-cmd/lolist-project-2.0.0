@@ -4,7 +4,8 @@ import { APIRoute, AppRoute } from "../../../const";
 import { createAPI } from "../../../services/api";
 import Card from "../Card/Card";
 
-function HeroesList() {
+function HeroesList({background}) {
+  document.documentElement.style.setProperty("--form-webkit", background);
   const [heroes, setHeroes] = useState([]);
 
   useEffect(() => {

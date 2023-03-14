@@ -33,7 +33,7 @@ function HeroesBuildsPage() {
         title={`${hero ? `${hero.name}'s builds` : ""}`}
         background="rgba(61, 29, 54, 32%)"
       >
-        <BuildsList builds={builds} />
+        <BuildsList background="rgba(33, 19, 30, 40%)" builds={builds} />
       </Board>
     </main>
   );

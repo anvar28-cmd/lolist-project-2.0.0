@@ -9,6 +9,9 @@
   margin-right: -8px;
   overflow-y: scroll;
   height: 100vw;
+  @include tablet {
+    grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+  }
 
   &::-webkit-scrollbar {
     width: 0.8rem;

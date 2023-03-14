@@ -5,7 +5,7 @@ import { createAPI } from "../../../services/api";
 import BuildsCard from "../BuildsCard/BuildsCard";
 import Button from "../Button/Button";
 
-function BuildsList({ builds, withHeroesName }) {
+function BuildsList({ builds, withHeroesName, background }) {
   const api = createAPI();
 
   const handleDeleteButtonClick = (id) => (evt) =>
@@ -31,6 +31,7 @@ function BuildsList({ builds, withHeroesName }) {
       {builds?.map((build) => (
         <li key={build.id} className="builds-list__item">
           <BuildsCard
+          background={background}
             build={build}
             heroName={withHeroesName ? build.hero.name : null}
             readOnly

@@ -5,11 +5,14 @@
   display: grid;
   gap: 16px;
   grid-auto-flow: column;
-  grid-auto-columns: 64px;
+  grid-auto-columns: 50px;
   overflow-x: scroll;
   padding-bottom: 8px;
   margin-bottom: -8px;
 
+  @include tablet {
+    grid-auto-columns: 64px;
+  }
   &::-webkit-scrollbar {
     height: 0.8rem;
   }

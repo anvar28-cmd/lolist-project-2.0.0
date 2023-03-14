@@ -19,6 +19,7 @@ function BuildsPage() {
     <main className="builds-page page__main container">
       <Board title="All builds" background="rgba(44, 103, 171, 39%)">
         <BuildsList
+          background="rgba(29, 15, 35, 30%)"
           builds={builds}
           withHeroesName
         />
