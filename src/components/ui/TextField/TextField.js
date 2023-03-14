@@ -8,7 +8,7 @@ function TextField({
   defaultValue,
   minlength,
   pattern,
-  title
+  title,
 }) {
   return (
     <div className="text-field">

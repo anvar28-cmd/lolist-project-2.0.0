@@ -53,8 +53,8 @@ function SignupPage({ setIsAuth, isAuth }) {
           name="name"
           type="text"
           placeholder="John Smith"
-          pattern="[A-Za-z]{3, 16}"
-          title="Name must contain at least 3 letters"
+          pattern="[A-Za-z\s]{4,16}"
+          title="Name must contain at least 4 letters(only)."
           required
         />
 
