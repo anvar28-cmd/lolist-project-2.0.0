@@ -71,5 +71,5 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   transition: background-color 100s ease-in-out 0s;
-  -webkit-text-fill-color: goldenrod !important;
+  -webkit-text-fill-color: $hextechgold2 !important;
 }

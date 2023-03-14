@@ -2,12 +2,12 @@
   display: flex;
   gap: 1rem;
   &__item {
-    background-color: goldenrod;
+    background-color: $hextechgold2;
     border-radius: 4px;
     
     width: 100%;
-    color: black;
-    border: 2px solid goldenrod;
+    color: $hextechblack;
+    border: 2px solid $hextechgold2;
     cursor: pointer;
     transition: .5s;
    
@@ -16,7 +16,7 @@
       backdrop-filter: blur(10px);
       background-color: transparent;
       color: #fff;
-      box-shadow: 0 4px 8px rgba(goldenrod, 0.5);
+      box-shadow: 0 4px 8px rgba($hextechgold2, 0.5);
     }
 
     
@@ -28,7 +28,7 @@
       backdrop-filter: blur(10px);
       background-color: transparent;
       color: #fff;
-      box-shadow: 0 4px 8px rgba(goldenrod, 0.5);
+      box-shadow: 0 4px 8px rgba($hextechgold2, 0.5);
       text-decoration-line: underline;
       text-underline-offset: 2px;
     }
@@ -42,7 +42,7 @@
     font-weight: 600;
     color: inherit;
     padding: 0.5rem 16px;
-    box-shadow: 0 4px 8px rgba(goldenrod, 0.5);
+    box-shadow: 0 4px 8px rgba($hextechgold2, 0.5);
     // height: 25px;
     @include tablet {
       padding: 1rem 3rem;

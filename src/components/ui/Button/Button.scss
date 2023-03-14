@@ -3,17 +3,17 @@
   justify-content: center;
   align-items: center;
   border: none;
-  background-color: goldenrod;
+  background-color: $hextechgold2;
   font-size: 1.2rem;
-  color: black;
+  color: $hextechblack;
   backdrop-filter: blur(15px);
   width: max-content;
   height: 25px;
   padding: 0 16px;
   border-radius: 4px;
   text-transform: uppercase;
-  border: 2px solid goldenrod;
-  box-shadow: 0 4px 8px rgba(goldenrod, 0.5);
+  border: 2px solid $hextechgold2;
+  box-shadow: 0 4px 8px rgba($hextechgold2, 0.5);
   cursor: pointer;
   transition: .3s;
   @include tablet {

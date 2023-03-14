@@ -23,7 +23,7 @@
     height: auto;
     aspect-ratio: 1/1;
     text-indent: -1000%;
-    background-color: rgba(goldenrod, 32%);
+    background-color: rgba($hextechgold2, 32%);
     border-radius: 4px;
     
   }
@@ -50,7 +50,7 @@
 //     flex-direction: column;
 //     align-items: center;
 //     width: 100%;
-//     color: $hextechgold3;
+//     color: $hextechgold2;
 //     aspect-ratio: 1/1;
 //     cursor: pointer;
   
@@ -67,7 +67,7 @@
 //       height: auto;
 //       aspect-ratio: 1/1;
 //       text-indent: 100%;
-//       border: 1px solid rgba($hextechgold3, 40%);
+//       border: 1px solid rgba($hextechgold2, 40%);
 //       object-fit: cover;
 //       object-position: center;
 //       border-radius: 4px;
