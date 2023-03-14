@@ -4,22 +4,20 @@
   &__item {
     background-color: $hextechgold2;
     border-radius: 4px;
-    
     width: 100%;
     color: $hextechblack;
     border: 2px solid $hextechgold2;
     cursor: pointer;
-    transition: .5s;
-   
+    transition: 0.5s;
+
     &:hover {
       // box-shadow: none;
       backdrop-filter: blur(10px);
       background-color: transparent;
-      color: #fff;
+      color: $hextechwhite;
       box-shadow: 0 4px 8px rgba($hextechgold2, 0.5);
     }
 
-    
     @include tablet {
       align-self: flex-start;
       margin: 10px 0;
@@ -27,7 +25,7 @@
     &--current {
       backdrop-filter: blur(10px);
       background-color: transparent;
-      color: #fff;
+      color: $hextechwhite;
       box-shadow: 0 4px 8px rgba($hextechgold2, 0.5);
       text-decoration-line: underline;
       text-underline-offset: 2px;
@@ -43,7 +41,6 @@
     color: inherit;
     padding: 0.5rem 16px;
     box-shadow: 0 4px 8px rgba($hextechgold2, 0.5);
-    // height: 25px;
     @include tablet {
       padding: 1rem 3rem;
       font-size: 1.6rem;

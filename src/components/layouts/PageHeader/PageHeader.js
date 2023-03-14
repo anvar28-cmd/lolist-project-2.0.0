@@ -15,8 +15,10 @@ function PageHeader({ setIsAuth }) {
   return (
     <header className="page-header container">
       <div className="page-header__user">
-      <h2 className="page-header__title">{`Welcome, ${user.name}!`}</h2>
-      <Button onClick={handleLogoutButtonClick} type="button">Logout</Button>
+        <h2 className="page-header__title">{`Welcome, ${user.name}!`}</h2>
+        <Button onClick={handleLogoutButtonClick} type="button">
+          Logout
+        </Button>
       </div>
       <PageNavigation />
     </header>

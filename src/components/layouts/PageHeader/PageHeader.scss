@@ -15,7 +15,6 @@
     width: 100%;
     align-items: center;
     gap: 1rem;
-    
 
     @include tablet {
       width: max-content;
@@ -24,7 +23,7 @@
     }
   }
   &__title {
-    color: #fff;
+    color: $hextechwhite;
     font-size: 1.5rem;
   }
 }

@@ -5,11 +5,7 @@ function Card({ name, image, children }) {
         {name}
       </figcaption>
       {image && name ? (
-        <img
-          className="card__image"
-          src={image}
-          alt={name}
-        />
+        <img className="card__image" src={image} alt={name} />
       ) : (
         <div className="card__image"></div>
       )}

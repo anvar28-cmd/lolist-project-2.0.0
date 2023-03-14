@@ -11,7 +11,7 @@ function NotFoundPage() {
         Back, you dirty ape, back!
       </Link>
     </main>
-  )
+  );
 }
 
 export default NotFoundPage;

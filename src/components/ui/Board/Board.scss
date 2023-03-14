@@ -1,14 +1,14 @@
 .board {
   position: relative;
   border-radius: 8px;
-  padding: 16px;
+  padding: 1.6rem;
   color: $hextechgold2;
   background-color: var(--board-background);
   width: 100%;
   height: 100%;
   &::-webkit-scrollbar {
     width: 0.8rem;
-  } 
+  }
 
   &::-webkit-scrollbar-track {
     background-color: var(--board-background);
@@ -21,10 +21,10 @@
   &__title {
     position: absolute;
     top: 0;
-    left: 8px;
+    left: 0.8rem;
     transform: translateY(-100%);
     margin: 0;
-    font-size: 18px;
+    font-size: 1.8rem;
     color: $hextechblue1;
     backdrop-filter: blur(20px);
     padding-left: 0.5rem;
@@ -34,10 +34,8 @@
 
   &__inner {
     max-width: 100%;
-    padding-right: 8px;
+    padding-right: 0.8rem;
     max-height: 100%;
     overflow-y: scroll;
-
-   
   }
 }

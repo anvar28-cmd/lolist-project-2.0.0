@@ -3,15 +3,15 @@
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 16px;
+  gap: 1.6rem;
   grid-auto-flow: column;
-  grid-auto-columns: 50px;
+  grid-auto-columns: 5rem;
   overflow-x: scroll;
-  padding-bottom: 8px;
-  margin-bottom: -8px;
+  padding-bottom: 0.8rem;
+  margin-bottom: -0.8rem;
 
   @include tablet {
-    grid-auto-columns: 64px;
+    grid-auto-columns: 6.4rem;
   }
   &::-webkit-scrollbar {
     height: 0.8rem;

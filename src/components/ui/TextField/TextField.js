@@ -11,7 +11,7 @@ function TextField({
 }) {
   return (
     <div className="text-field">
-      <input 
+      <input
         className="text-field__input"
         id={id}
         name={name}
@@ -22,7 +22,9 @@ function TextField({
         minLength={minlength}
         pattern={pattern}
       />
-      <label className="text-field__label" htmlFor={id}>{label}</label>
+      <label className="text-field__label" htmlFor={id}>
+        {label}
+      </label>
     </div>
   );
 }

@@ -56,7 +56,7 @@ function HeroesSelectedPage() {
           draggable: true,
           progress: undefined,
           theme: "light",
-          });
+        });
       })
       .catch((error) => console.log(error));
   };

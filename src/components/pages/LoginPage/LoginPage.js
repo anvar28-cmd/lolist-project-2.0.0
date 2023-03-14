@@ -32,7 +32,7 @@ function LoginPage({ isAuth, setIsAuth }) {
   return !isAuth ? (
     <main className="login-page page__main login-page--feature">
       <Form onSubmit={handleFormSubmit}>
-      <h1 className="login-page__title">LoLiST</h1>
+        <h1 className="login-page__title">LoLiST</h1>
         <TextField
           id="username"
           label="Username"

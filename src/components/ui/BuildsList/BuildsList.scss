@@ -1,10 +1,10 @@
 .builds-list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    overflow-y: scroll;
-    height: 100%;
-    &::-webkit-scrollbar {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  overflow-y: scroll;
+  height: 100%;
+  &::-webkit-scrollbar {
     width: 0.8rem;
   }
 
@@ -15,24 +15,23 @@
   &::-webkit-scrollbar-thumb {
     background-color: $hextechgold2;
   }
-    &__item {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 1rem;
+
+    @include tablet {
       align-items: center;
-      justify-content: flex-end;
-      margin-right: 1rem;
-      
-      @include tablet {
-        align-items: center;
-        flex-direction: row;
-        gap: 24px;
-      }
-    }
-    &__button {
-      margin-top: 1.8rem;
-      margin-right: auto;
-      margin-left: auto;
+      flex-direction: row;
+      gap: 2.4rem;
     }
   }
-  
+  &__button {
+    margin-top: 1.8rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

@@ -1,9 +1,9 @@
 .heroes-selected {
   display: flex;
   flex-direction: column-reverse;
-  gap: 32px;
+  gap: 3.2rem;
   height: auto;
-  padding-bottom: 320px;
+  padding-bottom: 32rem;
 
   &::before {
     background-image: url('../../../assets/img/hero-selected-page.jpg');
@@ -15,14 +15,14 @@
     overflow: hidden;
     align-items: flex-start;
     height: calc(100vh - 132px);
-    gap: 16px;
-    padding-bottom: 0px;
+    gap: 1.6rem;
+    padding-bottom: 0rem;
   }
 
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1.6rem;
 
     @include desktop {
       width: 35%;

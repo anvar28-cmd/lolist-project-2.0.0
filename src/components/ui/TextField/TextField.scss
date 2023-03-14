@@ -2,38 +2,38 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 48px;
+  height: 4.8rem;
   align-items: center;
-  margin-top: 14px;
+  margin-top: 1.4rem;
 }
 
 .text-field__label {
   position: absolute;
   top: 50%;
-  left: 16px;
-  font-size: 16px;
+  left: 1.6rem;
+  font-size: 1.6rem;
   line-height: 1;
   transform: translateY(-50%);
-  transition: .3s;
+  transition: 0.3s;
 
-  input:focus+&,
-  input:not(:placeholder-shown)+& {
-    top: -14px;
-    left: 8px;
+  input:focus + &,
+  input:not(:placeholder-shown) + & {
+    top: -1.4rem;
+    left: 0.8rem;
     transform: translateY(0);
-    font-size: 12px;
+    font-size: 1.2rem;
   }
 }
 
 .text-field__input {
   display: flex;
   width: 100%;
-  height: 48px;
-  font-size: 16px;
+  height: 4.8rem;
+  font-size: 1.6rem;
   border: 1px solid $hextechgold2;
   border-radius: 4px;
   background-color: transparent;
-  padding: 0 16px;
+  padding: 0 1.6rem;
   font-weight: bold;
 
   &:focus {
@@ -47,6 +47,6 @@
   }
 
   &:focus::placeholder {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 }

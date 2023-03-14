@@ -8,23 +8,23 @@
   color: $hextechblack;
   backdrop-filter: blur(15px);
   width: max-content;
-  height: 25px;
-  padding: 0 16px;
+  height: 2.5rem;
+  padding: 0 1.6rem;
   border-radius: 4px;
   text-transform: uppercase;
   border: 2px solid $hextechgold2;
   box-shadow: 0 4px 8px rgba($hextechgold2, 0.5);
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
   @include tablet {
     font-size: 1.6rem;
-    height: 40px;
+    height: 4rem;
   }
 
   &:hover {
     box-shadow: none;
     background-color: transparent;
-    color: #fff;
+    color: $hextechwhite;
   }
 
   &--fullwidth {
