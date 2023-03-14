@@ -21,8 +21,8 @@ function AboutPage() {
         <img className="about-page__img" alt="gameplay" src={gameImage} width={1463} height={823} />
         <p className="about-page__text">
           LoList is a very easy to use. It will help player to create Items for
-          their beloved champions. Here in picture you can there is 6 slots of
-          item. User has to build them correctly in order to counter their
+          their beloved champions. Here in picture you can see, there are 6 slots of
+          item and 2 slots of spells. User has to build them correctly in order to counter their
           enemy. Users can create their account and save their builds for their
           champions. They can also access champion's lore and stats. They can
           reference this build when they are in game.

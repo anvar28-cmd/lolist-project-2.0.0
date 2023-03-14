@@ -4,10 +4,7 @@
   gap: 32px;
   height: auto;
   padding-bottom: 320px;
-&:last-child {
-  
-  align-self: flex-start;
-}
+
   &::before {
     background-image: url('../../../assets/img/hero-selected-page.jpg');
   }
@@ -36,7 +33,6 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    // background-color: rgba(79, 94, 57, 42%);
     background-image: url('../../../assets/img/form-back.jpg');
     background-position: top;
     background-size: cover;
@@ -48,7 +44,7 @@
     @include desktop {
       position: static;
       background-image: unset;
-      background-color: rgb(79, 94, 57, 42%);
+      background-color: rgba(60, 32, 31, 52%);
       border-radius: 8px;
       z-index: 0;
       width: auto;

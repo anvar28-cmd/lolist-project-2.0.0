@@ -4,7 +4,7 @@ import HeroesList from '../../ui/HeroesList/HeroesList';
 function HeroesPage() {
   return (
     <main className="heroes-page page__main container">
-      <Board title="Champions" background="rgba(82, 37, 18, 30%)">
+      <Board title="Champions" background="rgba(50, 68, 41, 38%)">
         <HeroesList />
       </Board>
     </main>
