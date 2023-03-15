@@ -1,6 +1,6 @@
 # LoLiST APP
 
-Welcome to LoList 2. LoList will be as an add-on to the famous MOBA game called League of Legends. This site offers variety of latest content, Including champions, Items and spells. With LoList, you can plan out your builds in advance and have it customized to your individual needs. Start planning your builds and get an edge over your opponents. This updated version of project version 2 has improved security on the backend, increased functionality, and improved responsivness for mobile devices.
+Welcome to LoList 2. LoList is an add-on to the famous MOBA game called League of Legends. This site offers variety of latest content, Including champions, Items and spells. With LoList, you can plan out your builds in advance and have it customized to your individual needs. Start planning your builds and get an edge over your opponents. This updated version of project version 2 has improved security on the backend, increased functionality, and improved responsivness for mobile devices.
 
 ## Tech Stack
 
