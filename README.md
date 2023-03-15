@@ -79,6 +79,7 @@ npm start
 ```
 
 ### 6) You may procceed to site and click to sign up link to create a new account.
+![Sign up example](https://user-images.githubusercontent.com/48660175/225451292-b4af3acb-6c96-414b-a87c-e25e880d92ff.PNG)
 After sign up, you may explore the app. Have fun!
 
 ## API Reference
@@ -90,8 +91,11 @@ http://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/champion.json
 http://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/summoner.json
 
 ## Screenshots
-
-
+![login page](https://user-images.githubusercontent.com/48660175/225451398-a72ce5bd-adf1-4a3c-a160-676d99a396fb.PNG)
+![Sign up example](https://user-images.githubusercontent.com/48660175/225451292-b4af3acb-6c96-414b-a87c-e25e880d92ff.PNG)
+![3](https://user-images.githubusercontent.com/48660175/225451493-cefdad1f-fc72-4b79-90f6-a4bf6fbb0a9f.PNG)
+![2](https://user-images.githubusercontent.com/48660175/225451502-1a964df0-2e82-436a-8cd4-d8c46b1e5cff.PNG)
+![4](https://user-images.githubusercontent.com/48660175/225451508-a641733c-867b-4125-b4ef-58d13a0a1ea7.PNG)
 
 ## 🤝 Support
 
