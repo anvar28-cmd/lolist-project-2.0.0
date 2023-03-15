@@ -1,5 +1,6 @@
 .page-header {
   min-height: 10rem;
+  z-index: 2;
   @include tablet {
     display: flex;
   }
