@@ -9,7 +9,7 @@ function PageWrapper({ isAuth, setIsAuth }) {
       <Outlet />
     </>
   ) : (
-    <Navigate to={AppRoute.LOGIN} />
+    <Navigate to={AppRoute.SIGNUP} />
   );
 }
 

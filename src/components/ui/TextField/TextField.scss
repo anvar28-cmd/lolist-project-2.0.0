@@ -15,7 +15,7 @@
   line-height: 1;
   transform: translateY(-50%);
   transition: 0.3s;
-
+  
   input:focus + &,
   input:not(:placeholder-shown) + & {
     top: -1.4rem;
@@ -24,26 +24,25 @@
     font-size: 1.2rem;
   }
 }
-
 .text-field__input {
   display: flex;
   width: 100%;
   height: 4.8rem;
   font-size: 1.6rem;
-  
   border-radius: 4px;
   background-color: transparent;
   padding: 0 1.6rem;
   font-weight: bold;
+  border: 3px solid #daa520;
 
   &:focus {
     outline: none;
   }
   &:valid {
-    border: 3px solid green;
+    outline: 3px solid green;
   }
   &:invalid {
-    border: 3px solid $hextechgold2;
+    outline: 3px solid red ;
   }
   &::placeholder {
     color: rgba($hextechgold2, 0.5);
