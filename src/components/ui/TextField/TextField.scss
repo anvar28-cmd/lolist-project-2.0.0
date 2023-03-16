@@ -33,7 +33,7 @@
   background-color: transparent;
   padding: 0 1.6rem;
   font-weight: bold;
-  border: 3px solid #daa520;
+  
 
   &:focus {
     outline: none;
@@ -42,7 +42,7 @@
     outline: 3px solid green;
   }
   &:invalid {
-    outline: 3px solid red ;
+    outline: 3px solid hextechgold2;
   }
   &::placeholder {
     color: rgba($hextechgold2, 0.5);
