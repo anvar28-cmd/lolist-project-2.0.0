@@ -1,4 +1,3 @@
-require('dotenv').config();
 export const BASE_URL = process.env.REACT_APP_BASE_URL;
 export const ENDPOINT = `${BASE_URL}`;
 export const REQUEST_TIMEOUT = 5000;
