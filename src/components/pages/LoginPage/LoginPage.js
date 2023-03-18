@@ -39,8 +39,8 @@ function LoginPage({ isAuth, setIsAuth }) {
           name="username"
           type="text"
           placeholder="user123"
-          pattern="[A-Za-z\d\.]{4,12}"
-          title="Username must be between 4 and 12 characters in length and contain only letters, numbers and periods"
+          pattern="[A-Za-z\d\.]{4,25}"
+          title="Username must be between 4 and 25 characters in length and contain only letters, numbers and periods"
           required
         />
 
