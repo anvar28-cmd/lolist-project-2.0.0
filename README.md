@@ -1,6 +1,12 @@
 # LoLiST APP
 
-Welcome to LoList 2. LoList is an add-on to the famous MOBA game called League of Legends. This site offers variety of latest content, Including champions, Items and spells. With LoList, you can plan out your builds in advance and have it customized to your individual needs. Start planning your builds and get an edge over your opponents. This updated version of project version 2 has improved security on the backend, increased functionality, and improved responsivness for mobile devices.
+Welcome to LoList 2, the ultimate add-on for the popular MOBA game, League of Legends. This site offers the latest content on champions, items, and spells to help you plan out your builds in advance and customize them to your individual needs. With LoList, you'll gain an edge over your opponents and achieve victory.
+
+Updated version of LoLiST features improved security on the backend, ensuring that your data is safe and secure. Also, increased functionality and improved responsiveness for mobile devices, allowing you to access your saved builds from anywhere, at any time.
+
+In addition, the new version of LoLiST now includes the ability to delete saved builds, giving you greater control over your saved content. With these new features and improvements, LoList 2 provides players with an even better experience when using the application to improve their gameplay strategies.
+
+Join the LoList today and start planning your builds like a pro. Get ready to dominate the game with LoList 2!
 
 ## Tech Stack
 
